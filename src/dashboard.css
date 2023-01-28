@@ -1,0 +1,347 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #e2e2e2;
+    color: white;
+}
+.logoHolder{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3E454D;
+}
+.logoHolder i{
+    margin-right: 5px;
+    color: #02afd7;
+}
+.headName1{
+    margin-right: 2px;
+    color: #02afd7;
+}
+.mainContainer{
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+}
+aside{
+    width: 220px;
+    height: 100%;
+    background-color: #2C3135;
+}
+.sideBar{
+    width: 100%;
+    height: 100%;
+}
+.profileSpace{
+    width: 100%;
+    height: 140px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.picHolder{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: url(../Images/profile_pic.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.profileSpace span{
+    color: #02afd7;
+}
+.sideBarList{
+    width: calc(100% - 20px);
+    height: calc(100% - 180px);
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+}
+.sideBarListItems{
+    display: flex;
+    align-items:flex-end;
+    margin: 15px 0;
+}
+.sideBarListItems i{
+    color: rgb(185, 184, 184);
+    margin-right: 10px;
+}
+.sideBarListItems a{
+    text-decoration: none;
+    color: white;
+}
+.subContainer{
+    width: calc(100% - 220px);
+    height: 100%;
+    /* padding-bottom: 10px 0; */
+}
+.actionButtons{
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.topContent{
+   width: 100%;
+   height: 200px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   /* background-color: rgb(240, 238, 238); */
+}
+.summaryCard{
+    width: 170px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+    -moz-box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+}
+.summaryCard.cust{
+    background-color:#339792;
+}
+.summaryCard.manu{
+    background-color: #8258CF;
+}
+.summaryCard.med{
+    background-color: #739157;
+}
+.summaryCard.out{
+    background-color: #F9C56E;
+}
+.summaryCard.expired{
+    background-color: #F0948A;
+}
+.summaryCard.invoice{
+    background-color: #6BABBC;
+}
+.bottomContent{
+    width: 100%;
+    height: calc(100% - 210px);
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.one{
+    width: 770px ;
+    padding: 20px 5px;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+    -moz-box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+}
+.one::before, .two::before{
+        content: "";
+        position:absolute;
+        margin:-35px;
+        width:40px;
+        height:40px;
+        transform:rotate(35deg);
+        background-color:#02afd7; /* to see where it is */
+
+}
+.bottomContent h4{
+    padding-left: 10px;
+    color: black;
+}
+.two{
+    width: 340px;
+    color: black;
+    position: relative;
+    padding:20px 10px ;
+    background-color: rgb(247, 245, 245);
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+    -moz-box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+}
+.two table{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: left;
+    margin: 30px 0;
+}
+.two tr:nth-child(even){
+    background-color: #dddddd;
+}
+.two th{
+    background-color: #3E454D;
+    color: rgb(240, 240, 240);
+    text-align: center;
+    border: 1px solid black;
+}
+.two td{
+    padding: 3px;
+    border: 1px solid black;
+}
+.dispenseContainer, .returnContainer{
+    width: calc(100% - 240px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: center;
+}
+.tableWrapper{
+    width: 80%;
+    height: 100%;
+}
+.filterWrapper{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mySearch{
+    width: 80%;
+    height: 80%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.dispensary{
+    width: 100%;
+    height: calc(100% - 50px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+}
+.dispenseTable{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 5px;
+    text-align: center;
+}
+.headRow{
+    color: rgb(255, 247, 247);
+    background-color: #3E454D;
+}
+.headRow th{
+    width: 100px;
+    height: 30px;
+}
+.dataRow{
+    padding: 0;
+    margin: 0;
+    background-color: #2ea44f;
+}
+.dataRow td{
+    width: 100px;
+    height: 40px;
+}
+.dataRow td input{
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    background-color: rgb(245, 244, 243);
+}
+.dataRow td i{
+    color: white;
+    cursor: pointer;
+}
+.dataRow td i:hover{
+    color: red;
+}
+.final{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 10px;
+    font-weight: bold;
+}
+.final label{
+    font-size: 17px;
+    margin-right: 10px;
+}
+.final input{
+    height: 25px;
+}
+.action{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.cancelBtn{
+    background-color: #d10606;
+}
+.serveBtn{
+    background-color: #2ea44f;
+}
+.cancelBtn, .serveBtn{
+      appearance: none;
+      border: 1px solid rgba(27, 31, 35, .15);
+      border-radius: 6px;
+      box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      padding: 6px 16px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: middle;
+      white-space: nowrap;
+      margin: 0 20px;
+    }
+    
+    .serveBtn:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+      outline: none;
+    }
+    
+    .serveBtn:hover {
+      background-color: #2c974b;
+    }
+    
+    .serveBtn:focus {
+      box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+      outline: none;
+    }
+    
+    .serveBtn:disabled {
+      background-color: #94d3a2;
+      border-color: rgba(27, 31, 35, .1);
+      color: rgba(255, 255, 255, .8);
+      cursor: default;
+    }
+    
+    .serveBtn:active {
+      background-color: #298e46;
+      box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+    }

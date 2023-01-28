@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./dashboard.css">
+
+</head>
+<body>
+    <div class="logoHolder">
+        <i class="material-icons">local_pharmacy</i>
+        <span class="headName1">Pearsons</span>
+        <span>Pharmacy</span>
+    </div>
+    <div class="mainContainer">
+        <aside>
+            <div class="sideBar">
+                <div class="profileSpace">
+                    <div class="picHolder"> </div>
+                    <span>Debby_Mensah</span>
+                </div>
+                <ul class="sideBarList">
+                    <li class="sideBarListItems">
+                        <i class="material-icons">dashboard</i>
+                        <a href="./dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="sideBarListItems">
+                        <i class="material-icons">bubble_chart</i>
+                        <a href="./dispense.html">Dispense Drug</a>
+                    </li>
+                    <li class="sideBarListItems">
+                        <i class="material-icons">cached</i>
+                        <a href="./drugReturn.html">Drug Returns</a>
+                    </li>
+                    <li class="sideBarListItems">
+                        <i class="material-icons">dashboard</i>
+                        <a href="./store.html">Store</a>
+                    </li>
+                    <li class="sideBarListItems">
+                        <i class="material-icons">dashboard</i>
+                        <a href="./manufacturer.html">Manufacturers</a>
+                    </li>
+                    <li class="sideBarListItems">
+                        <i class="material-icons">dashboard</i>
+                        <a href="./customer.html">Customers</a>
+                    </li>
+                    <li class="sideBarListItems">
+                        <i class="material-icons">dashboard</i>
+                        <a href="./expiredDrugs.html">Expired Drugs</a>
+                    </li>
+                    <li class="sideBarListItems">
+                        <i class="material-icons">group_work</i>
+                        <a href="./outStock.html">Out Of Stock</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="subContainer">
+            <div class="topContent">
+                <div class="summaryCard cust">
+                    <span>11</span>
+                    <span>Total Customers</span>
+                </div>
+                <div class="summaryCard manu">
+                    <span>23</span>
+                    <span>Total Manufacturers</span>
+                </div>
+                <div class="summaryCard med">
+                    <span>200</span>
+                    <span>Total Medicines</span>
+                </div>
+                <div class="summaryCard out">
+                    <span>8</span>
+                    <span>Out Of Stock</span>
+                </div>
+                <div class="summaryCard expired">
+                    <span>13</span>
+                    <span>Expired</span>
+                </div>
+                <div class="summaryCard invoice">
+                    <span>6</span>
+                    <span>Total Invoice</span>
+                </div>
+            </div>
+            <div class="bottomContent">
+                <div  class="one"> 
+                    <h4>Monthly Progress Report</h4>
+                    <canvas id="myChart" width="400" height="400"></canvas>
+
+                </div>
+                <div class="two"> 
+                    <h4>Today's Progress Report</h4>
+                    <table class="progressTable">
+                        <tr>
+                            <th>Today's Report</th>
+                            <th>Amount</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Total Sales
+                            </td>
+                            <td>
+                                $56700.09
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Total Purchase
+                            </td>
+                            <td>
+                                $678.002
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Cash Received
+                            </td>
+                            <td>
+                                $456702.34
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Invoice Due
+                            </td>
+                            <td>
+                                $0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Total Service                            </td>
+                            <td>
+                                $0
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+       
+       
+    </div>
+    
+    <script src='https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js'></script>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange','Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange',],
+                datasets: [{
+                    label: 'Sales',
+                    data: [12, 19, 3, 5, 2, 3,12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+            }
+        });
+        </script>
+
+</body>
+</html>
